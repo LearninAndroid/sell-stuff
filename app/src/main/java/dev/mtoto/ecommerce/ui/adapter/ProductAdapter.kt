@@ -14,7 +14,7 @@ class ProductAdapter(private val products: ArrayList<Product>) : RecyclerView.Ad
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductAdapter.ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.product_row,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.product_row, parent, false)
         return ViewHolder(view)
     }
 
@@ -23,11 +23,13 @@ class ProductAdapter(private val products: ArrayList<Product>) : RecyclerView.Ad
     override fun onBindViewHolder(holder: ProductAdapter.ViewHolder, position: Int) {
         Picasso.get().load(products[position].photoUrl).into(holder.image)
         holder.title.text = products[position].title
+        holder.price.text = products[position].price.toString()
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val image: ImageView = itemView.findViewById(R.id.photo)
         val title: TextView = itemView.findViewById(R.id.title)
+        val price: TextView = itemView.findViewById(R.id.price);
 
     }
 }
