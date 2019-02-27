@@ -24,6 +24,7 @@ class Home : AppCompatActivity() {
             layoutManager = GridLayoutManager(this@Home,2)
             adapter = ProductAdapter(products)
         }
+
     }
 
 }
