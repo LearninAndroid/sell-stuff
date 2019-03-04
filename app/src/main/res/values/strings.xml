@@ -3,4 +3,6 @@
     <string name="title_activity_home">Home</string>
     <string name="blog_item_row">Organic Apple Sauce</string>
     <string name="default_price">$5.99</string>
+    <string name="product_details">Product Details</string>
+    <string name="see_if_its_available">See if Its Available</string>
 </resources>
