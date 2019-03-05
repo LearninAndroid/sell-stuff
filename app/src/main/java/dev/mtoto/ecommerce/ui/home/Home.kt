@@ -5,8 +5,8 @@ import android.support.v7.widget.GridLayoutManager
 import dev.mtoto.ecommerce.R
 import dev.mtoto.ecommerce.model.Product
 import dev.mtoto.ecommerce.ui.adapter.ProductAdapter
-import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.content_home.*
+import kotlinx.android.synthetic.main.main.*
 
 class Home : AppCompatActivity() {
 
@@ -17,7 +17,7 @@ class Home : AppCompatActivity() {
 
         val products = arrayListOf<Product>()
         for(i in 0..100){
-            products.add(Product("Organic Juice","http://via.placeholder.com/350/dddddd/000000",18.99))
+            products.add(Product("Organic Juice $i","http://via.placeholder.com/350/dddddd/000000",18.99))
         }
         recycler_view.apply {
             layoutManager = GridLayoutManager(this@Home,2)

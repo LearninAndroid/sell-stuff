@@ -5,4 +5,5 @@
     <string name="default_price">$5.99</string>
     <string name="product_details">Product Details</string>
     <string name="see_if_its_available">See if Its Available</string>
+    <string name="settings">Settings</string>
 </resources>
