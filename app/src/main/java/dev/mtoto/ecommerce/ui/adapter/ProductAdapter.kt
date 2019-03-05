@@ -14,13 +14,12 @@ import dev.mtoto.ecommerce.ui.products.ProductDetail
 
 class ProductAdapter(private val products: ArrayList<Product>) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductAdapter.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.product_row, parent, false)
         val holder = ViewHolder(view)
         view.setOnClickListener {
-            val intent = Intent(parent.context,ProductDetail::class.java)
-            intent.putExtra("title",products[holder.adapterPosition].title)
+            val intent = Intent(parent.context, ProductDetail::class.java)
+            intent.putExtra("title", products[holder.adapterPosition].title)
             parent.context.startActivity(intent)
         }
         return holder

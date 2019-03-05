@@ -11,8 +11,8 @@ class ProductDetail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_detail)
-        val title = intent.getStringExtra("title");
-        product_name.text = title;
+        val title = intent.getStringExtra("title")
+        product_name.text = title
         action_availability.setOnClickListener {
             AlertDialog.Builder(this)
                 .setMessage("Hey, $title is in Stock!")

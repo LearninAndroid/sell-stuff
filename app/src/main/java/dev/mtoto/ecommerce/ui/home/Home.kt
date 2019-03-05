@@ -16,7 +16,6 @@ class Home : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         val products = arrayListOf<Product>()
-
         for(i in 0..100){
             products.add(Product("Organic Juice","http://via.placeholder.com/350/dddddd/000000",18.99))
         }
@@ -24,7 +23,5 @@ class Home : AppCompatActivity() {
             layoutManager = GridLayoutManager(this@Home,2)
             adapter = ProductAdapter(products)
         }
-
     }
-
 }
