@@ -1,10 +1,13 @@
 package dev.mtoto.ecommerce.ui.home
 import android.os.Bundle
+import android.support.v4.view.GravityCompat
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager
+import android.view.MenuItem
 import dev.mtoto.ecommerce.R
 import dev.mtoto.ecommerce.model.Product
 import dev.mtoto.ecommerce.ui.adapter.ProductAdapter
+import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.content_home.*
 import kotlinx.android.synthetic.main.main.*
 
@@ -15,6 +18,17 @@ class Home : AppCompatActivity() {
         setContentView(R.layout.activity_home)
         setSupportActionBar(toolbar)
 
+        navigation_view.setNavigationItemSelectedListener {
+            it.isChecked = true
+            drawerLayout.closeDrawers()
+             true
+        }
+
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp)
+        }
+
         val products = arrayListOf<Product>()
         for(i in 0..100){
             products.add(Product("Organic Juice $i","http://via.placeholder.com/350/dddddd/000000",18.99))
@@ -23,5 +37,10 @@ class Home : AppCompatActivity() {
             layoutManager = GridLayoutManager(this@Home,2)
             adapter = ProductAdapter(products)
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        drawerLayout.openDrawer(GravityCompat.START)
+        return super.onOptionsItemSelected(item)
     }
 }
