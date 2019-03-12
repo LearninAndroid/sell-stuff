@@ -7,14 +7,14 @@
 >
     <group android:checkableBehavior="single">
         <item
-                android:id="@+id/action_settings"
+                android:id="@+id/action_jeans"
                 android:orderInCategory="100"
                 android:title="@string/settings"
                 android:icon="@drawable/ic_attach_money_black_24dp"
                 app:showAsAction="never"
         />
         <item
-                android:id="@+id/action_settings2"
+                android:id="@+id/action_shorts"
                 android:orderInCategory="100"
                 android:title="@string/settings"
                 android:icon="@drawable/ic_attach_money_black_24dp"

@@ -3,6 +3,7 @@ import android.os.Bundle
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager
+import android.util.Log.d
 import android.view.MenuItem
 import dev.mtoto.ecommerce.R
 import dev.mtoto.ecommerce.model.Product
@@ -21,6 +22,9 @@ class Home : AppCompatActivity() {
         navigation_view.setNavigationItemSelectedListener {
             it.isChecked = true
             drawerLayout.closeDrawers()
+            when(it.itemId){
+                R.id.action_shorts -> d("kamau","Shorts was pressed")
+            }
              true
         }
 
