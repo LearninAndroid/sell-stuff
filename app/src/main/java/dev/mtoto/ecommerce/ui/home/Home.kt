@@ -24,6 +24,9 @@ class Home : AppCompatActivity() {
             drawerLayout.closeDrawers()
             when(it.itemId){
                 R.id.action_shorts -> d("kamau","Shorts was pressed")
+                R.id.action_jeans ->{
+
+                }
             }
              true
         }
