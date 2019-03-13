@@ -8,6 +8,7 @@ import android.view.MenuItem
 import dev.mtoto.ecommerce.R
 import dev.mtoto.ecommerce.model.Product
 import dev.mtoto.ecommerce.ui.adapter.ProductAdapter
+import dev.mtoto.ecommerce.ui.products.jeans.JeansFragment
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.content_home.*
 import kotlinx.android.synthetic.main.main.*
@@ -25,7 +26,8 @@ class Home : AppCompatActivity() {
             when(it.itemId){
                 R.id.action_shorts -> d("kamau","Shorts was pressed")
                 R.id.action_jeans ->{
-
+                    supportFragmentManager.beginTransaction().replace(R.id.frameLayout,JeansFragment())
+                        .commit()
                 }
             }
              true
