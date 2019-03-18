@@ -20,10 +20,12 @@ class Home : AppCompatActivity() {
         setContentView(R.layout.activity_home)
         setSupportActionBar(toolbar)
 
+        supportFragmentManager.beginTransaction().replace(R.id.frameLayout,HomeFragment()).commit()
+
         navigation_view.setNavigationItemSelectedListener {
             it.isChecked = true
             drawerLayout.closeDrawers()
-            when(it.itemId){
+            when(it.itemId){   
                 R.id.action_shorts -> d("kamau","Shorts was pressed")
                 R.id.action_jeans ->{
                     supportFragmentManager.beginTransaction().replace(R.id.frameLayout,JeansFragment())
