@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+def anko_version = '0.10.8'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -38,6 +40,9 @@ dependencies {
     implementation 'com.instabug.library:instabug:8.0.19'
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation "org.jetbrains.anko:anko:$anko_version"
+    implementation 'com.google.code.gson:gson:2.8.5'
+
 
 
 }
