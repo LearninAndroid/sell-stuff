@@ -42,7 +42,6 @@ class Home : AppCompatActivity() {
             setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp)
         }
 
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

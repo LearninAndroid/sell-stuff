@@ -34,6 +34,8 @@ class HomeFragment : Fragment() {
             }
         }
 
+        val categories = listOf("Jeans","Skirts","Sweaters", "Warmer Clothes")
+
 
         return root
     }
