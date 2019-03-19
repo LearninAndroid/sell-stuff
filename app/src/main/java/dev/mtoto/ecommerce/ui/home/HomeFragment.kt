@@ -3,6 +3,7 @@ package dev.mtoto.ecommerce.ui.home
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +21,7 @@ class HomeFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_home, container, false);
         doAsync {
+
             val json = URL("https://finepointmobile.com/data/products.json").readText()
 
             uiThread {
