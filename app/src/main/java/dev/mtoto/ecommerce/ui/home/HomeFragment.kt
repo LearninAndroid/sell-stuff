@@ -38,7 +38,7 @@ class HomeFragment : Fragment() {
             }
         }
 
-        val categories = listOf("Jeans","Skirts","Sweaters", "Warmer Clothes")
+        val categories = listOf("Jeans","Skirts","Sweaters", "Warmer Clothes", "Pants" ,"Khaki Shorts" , "Blouses")
         root.categoriesRecylerView.apply {
             layoutManager = LinearLayoutManager(activity,RecyclerView.HORIZONTAL,false)
             adapter = CategoryAdapter(categories)
