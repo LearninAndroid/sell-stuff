@@ -20,6 +20,7 @@ class ProductAdapter(private val products: List<Product>) : RecyclerView.Adapter
         view.setOnClickListener {
             val intent = Intent(parent.context, ProductDetail::class.java)
             intent.putExtra("title", products[holder.adapterPosition].title)
+            intent.putExtra("photo_url",products[holder.adapterPosition].photoUrl)
             parent.context.startActivity(intent)
         }
         return holder
