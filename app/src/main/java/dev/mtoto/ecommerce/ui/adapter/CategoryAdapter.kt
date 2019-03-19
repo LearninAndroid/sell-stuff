@@ -1,20 +1,22 @@
 package dev.mtoto.ecommerce.ui.adapter
 
 import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import dev.mtoto.ecommerce.R
 
-class CategoryAdapter(categories: List<String>) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
-    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+class CategoryAdapter(private val categories: List<String>) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.category_row,parent,false)
+        return ViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun getItemCount(): Int =  categories.size
+
 
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
