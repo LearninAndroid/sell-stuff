@@ -27,6 +27,7 @@ class HomeFragment : Fragment() {
                 root.recycler_view.apply {
                     layoutManager = GridLayoutManager(activity, 2)
                     adapter = ProductAdapter(products)
+                    root.items_progress_loader.visibility = View.GONE
                 }
             }
         }
