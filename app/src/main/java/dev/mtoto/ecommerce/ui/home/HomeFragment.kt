@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,9 +13,9 @@ import dev.mtoto.ecommerce.R
 import dev.mtoto.ecommerce.model.Product
 import dev.mtoto.ecommerce.ui.adapter.CategoryAdapter
 import dev.mtoto.ecommerce.ui.adapter.ProductAdapter
-import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.support.v4.supportFragmentUiThread
 import org.jetbrains.anko.uiThread
 import java.net.URL
 
@@ -34,6 +33,7 @@ class HomeFragment : Fragment() {
                     layoutManager = GridLayoutManager(activity, 2)
                     adapter = ProductAdapter(products)
                     root.items_progress_loader.visibility = View.GONE
+
                 }
             }
         }
